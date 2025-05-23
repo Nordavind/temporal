@@ -1,0 +1,123 @@
+// Header Home
+
+.header-container {
+  background-image: url("../img/pattern-a.svg"), linear-gradient(263deg, $color-dark-a 17.49%, $color-dark-b 91.12%);
+  background-color: $color-dark-a;
+  background-size: 400px 400px, auto;
+  background-repeat: repeat, no-repeat;
+  padding: 30px 40px;
+  overflow: hidden;
+}
+
+.hero-container {
+  padding-top: 160px;
+  padding-bottom: 130px;
+}
+
+.hero-position-wrapper {
+  max-width: 772px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-wrapper {
+  max-width: 772px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 10px 10px 20px 0px rgba(26, 17, 39, 0.30);
+}
+
+%position-abso {
+  position: absolute;
+  z-index: -1;
+}
+
+.elipse-1 {
+  @extend %position-abso; //layouts/_header-home.scss
+  top: -90px;
+  right: -150px;
+  user-select: none;
+}
+
+.elipse-2 {
+  @extend %position-abso; //layouts/_header-home.scss
+  bottom: -120px;
+  right: 30px;
+  user-select: none;
+}
+
+.elipse-3 {
+  @extend %position-abso; //layouts/_header-home.scss
+  top: -10px;
+  left: -100px;
+  user-select: none;
+}
+
+.hero-subwrapper {
+  text-align: center;
+  padding: 50px 50px;
+  margin: auto;
+  @extend %flex-init-col; //utilities/_variables.scss
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-content {
+  @extend %flex-init-col; //utilities/_variables.scss
+  align-items: center;
+  gap: 20px;
+}
+
+.buttons-hero-wrapper {
+  @extend %flex-init-row;
+  justify-content: center; //utilities/_variables.scss
+  gap: 30px;
+}
+
+
+// Mobile - Llamados en _mobile.scss
+
+@mixin header-home--lg() {
+  .hero-container {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+@mixin header-home--md() {
+  .hero-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .elipse-1 {
+    top: -20px;
+  }
+}
+
+@mixin header-home--sm() {
+  .header-container {
+    padding: 30px 30px;
+  }
+
+  .hero-container {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .hero-subwrapper {
+    padding: 40px 15px;
+    gap: 40px;
+  }
+
+  .buttons-hero-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 25px;
+  }
+}

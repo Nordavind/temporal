@@ -1,0 +1,18 @@
+// sass --watch style/scss/main.scss style/style.css --style=compressed
+
+@import 'utilities/variables';
+@import 'base/reset';
+@import 'base/typo';
+@import 'base/basic';
+@import 'utilities/anim';
+@import 'components/buttons';
+@import 'components/navbar.scss';
+@import 'components/back-top.scss';
+@import 'layouts/header-home';
+@import 'layouts/post-header';
+@import 'layouts/logos-grid';
+@import 'layouts/servicios';
+@import 'layouts/contacto-index';
+@import 'layouts/header-interior';
+@import 'layouts/footer';
+@import 'mobile';

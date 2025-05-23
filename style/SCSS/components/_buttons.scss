@@ -1,0 +1,100 @@
+// Botones
+
+.button-base {
+  width: 180px;
+  display: block;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: $color-wht;
+
+  &.button-gradient {
+    padding: 18px 0px;
+    border-radius: 10px;
+    background-size: 300% 100%;
+    transition: all 0.4s ease-in-out;
+
+    &.btn-gradient-effect {
+      background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-primary, $color-secondary);
+    }
+  }
+
+  &.button-ghost {
+    width: 178px;
+    padding: 16px 0px;
+    border-radius: 10px;
+    border: 2px solid $color-wht;
+    background: rgba(0, 0, 0, 0.00);
+    transition: all .3s ease-in-out;
+  }
+}
+
+
+// Links textos
+
+.leer-mas-link {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  text-decoration: none;
+  color: $color-wht;
+  text-transform: uppercase;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.h3-link {
+  text-decoration: none;
+}
+
+.h3-link-text {
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+
+// Fix hover solo en desktop - Llamados en _mobile.scss
+
+@mixin buttons--hoverfix() {
+  .button-gradient {
+
+    &.button-gradient:hover {
+      background-position: 100% 0;
+      transition: all .4s ease-in-out;
+    }
+
+    &.button-gradient:focus {
+      outline: none;
+    }
+  }
+
+  .button-ghost {
+
+    &:hover {
+      background: $color-primary;
+      border: 2px solid $color-primary;
+    }
+  }
+}
+
+
+// Mobile - Llamados en _mobile.scss
+
+@mixin buttons--sm() {
+  .button-base {
+    width: 200px;
+
+    &.button-ghost {
+      width: 199px;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+// Typo
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500;600&family=Sora:wght@200;300;400;500;600&display=swap');
+
+// Variables Fuentes
+
+$font-uno: 'Lexend', sans-serif;
+$font-dos: 'Sora', sans-serif;
+
+// Encabezados
+
+%titulo-base {
+  font-family: $font-dos;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+  font-weight: 600;
+  color: $color-wht;
+}
+
+h1 {
+  @extend %titulo-base; //fuentes
+
+  &.h1-index {
+    font-weight: 300;
+    color: $color-wht;
+    max-width: 80%;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &.h1-internal {
+    background: linear-gradient(90deg, $color-secondary 0%, $color-primary 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+h2 {
+  @extend %titulo-base; //fuentes
+
+  &.h2-post-header {
+    background: linear-gradient(90deg, $color-secondary 0%, $color-primary 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &.h2-white {
+    color: $color-wht;
+    font-weight: 300;
+  }
+
+  &.h2-form-index-title {
+    text-align: center;
+  }
+
+  &.h2-lateral-internal-title {
+    color: $color-wht;
+    font-size: 1.4rem;
+    font-weight: 200;
+    line-height: 1.9rem;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+h3 {
+  font-family: $font-uno;
+  color: $color-wht;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.69rem;
+  text-transform: uppercase;
+
+  &.h3-footer-title {
+    font-family: $font-uno;
+    color: $color-wht;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1rem;
+    text-transform: capitalize;
+  }
+}
+
+h4 {
+  font-family: $font-uno;
+  color: $color-wht;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+// Textos
+
+p {
+  color: $color-wht;
+  font-size: 0.875rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+  letter-spacing: 0.0300rem;
+
+  &.p-hero {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  &.p-bajada-post-header {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  &.p-post-header {
+    font-size: 0.95rem;
+    padding-bottom: 20px;
+  }
+
+  &.p-post-header:last-child {
+    padding-bottom: 0px;
+  }
+
+  &.p-post-header-color {
+    color: $color-third;
+    font-weight: 300;
+  }
+
+  &.p-confian {
+    color: $color-third;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &.p-cards {
+    color: $color-third;
+    font-weight: 300;
+  }
+
+  &.p-footer {
+    font-size: 0.95rem;
+    color: #B49CD9;
+    font-weight: 300;
+  }
+}

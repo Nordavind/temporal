@@ -1,0 +1,151 @@
+// Servicios
+
+.services-grid {
+  max-width: 1188px; //1140px aumentado (24+24) para equiparar con BS
+  margin: auto;
+}
+
+.services-grid-item {
+  min-height: 430px;
+  padding: 35px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  background: $color-dark-a;
+  -webkit-box-shadow: 12px 12px 35px #1e132d, -12px -12px 35px #34234f;
+  box-shadow: 12px 12px 35px #1e132d, -12px -12px 35px #34234f;
+
+  &.services-grid-internal-item {
+    min-height: 350px;
+  }
+}
+
+.service-grid-item-superior {
+  @extend %flex-init-col;
+  gap: 20px;
+}
+
+.service-ico {
+  width: 50px;
+}
+
+
+// Servicios internos
+
+.services-grid-internal-main {
+  display: grid;
+  max-width: 1140px;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 60px 60px;
+}
+
+.services-grid-int-wrap-a {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.services-grid-int-wrap-b {
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+.services-grid-int-riel {
+  height: 100%;
+}
+
+.grid-internal-lateral-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  @extend %flex-init-col; //utilities/_variables.scss
+  gap: 40px;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.grid-internal-lateral-content-wrapper {
+  @extend %flex-init-col;
+  gap: 20px;
+}
+
+.grid-int-content-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 40px 40px;
+}
+
+.volver-button-wrapper {
+  display: none;
+}
+
+// Mobile - Llamados en _mobile.scss
+
+@mixin servicios--lg() {
+  .services-grid-internal-main {
+    gap: 40px 40px;
+  }
+
+  .grid-internal-lateral-sticky {
+    position: static;
+    align-self: auto;
+  }
+}
+
+@mixin servicios--md() {
+  .services-grid-internal-main {
+    gap: 40px 40px;
+  }
+
+  .services-grid-item {
+    min-height: auto;
+
+    &.services-grid-internal-item {
+      min-height: auto;
+      padding-bottom: 50px;
+    }
+  }
+
+  .leer-mas-link {
+    padding-top: 40px;
+  }
+
+  .grid-int-content-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@mixin servicios--sm() {
+  .services-grid-internal-main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 60px 60px;
+  }
+
+  .services-grid-int-wrap-a {
+    grid-area: auto;
+  }
+
+  .services-grid-int-wrap-b {
+    grid-area: auto;
+  }
+
+  .grid-internal-lateral-sticky {
+    text-align: center;
+    align-items: center;
+  }
+
+  .volver-button-wrapper {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding-top: 60px;
+
+    a {
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+// Post header
+
+.post-header {
+  max-width: 1140px;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+
+.post-header-left {
+  max-width: 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  text-align: right;
+}
+
+.post-header-right {
+  max-width: 60%;
+}
+
+.post-header-right span {
+  font-weight: 600;
+}
+
+
+// Mobile - Llamados en _mobile.scss
+
+@mixin post-header--md() {
+  .post-header {
+    flex-flow: column nowrap;
+    justify-content: center; //revisar
+    align-items: center; //revisar
+    gap: 35px;
+  }
+
+  .post-header-left {
+    max-width: 100%;
+    flex-flow: column nowrap;
+    text-align: center;
+  }
+
+  .post-header-right {
+    max-width: 100%;
+    text-align: center;
+  }
+}

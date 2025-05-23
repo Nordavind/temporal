@@ -1,0 +1,46 @@
+// Logos Grid
+
+.logos-grid {
+  max-width: 950px;
+  margin: auto;
+  padding: 100px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.logos-grid-item {
+  display: flex;
+  justify-content: center;
+
+  img {
+    height: 40px;
+  }
+}
+
+
+// Mobile - Llamados en _mobile.scss
+
+@mixin logos-grid--md() {
+  .logos-grid {
+    max-width: 100%;
+    padding: 80px 0px 0px 0px;
+  }
+}
+
+@mixin logos-grid--sm() {
+  .logos-grid {
+    max-width: 100%;
+    padding: 60px 0px 0px 0px;
+  }
+
+  .logos-grid-item:first-child {
+    width: 100%;
+  }
+
+  .logos-grid-item {
+    width: 160px;
+  }
+}

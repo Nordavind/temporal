@@ -1,0 +1,176 @@
+// Footer
+
+.footer-container {
+  padding: 0px 40px;
+  background: linear-gradient(180deg, rgba(59, 40, 87, 0.20) 0%, rgba(41, 27, 62, 0.20) 100%), $color-dark-a;
+}
+
+.footer-wrapper {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.footer-grid {
+  padding: 80px 0px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 55px;
+  grid-row-gap: 0px;
+}
+
+.footer-grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.rrss-icons {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+
+  img {
+    width: 25px;
+  }
+}
+
+.menu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  a {
+    font-size: 0.95rem;
+    color: $color-third;
+    font-weight: 300;
+    line-height: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    img {
+      width: 15px;
+    }
+  }
+}
+
+.sub-footer {
+  max-width: 1140px;
+  margin: auto;
+  padding: 15px 0px;
+  border-top: 1px solid #322249;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  p {
+    font-family: $font-dos;
+    font-size: 0.75rem;
+    font-weight: 200;
+    color: $color-third;
+  }
+
+  span {
+    font-family: $font-dos;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: $color-wht;
+  }
+
+  .sub-footer-links {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+    align-items: center;
+
+    a {
+      font-family: $font-dos;
+      font-size: 0.75rem;
+      font-weight: 200;
+      color: $color-wht;
+      text-decoration: none;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+// Nav Footer 
+
+ul.menu-footer {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  li a {
+    color: $color-wht;
+    text-shadow: 0px 3px 3px #1C132A;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.0300rem;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+
+// Mobile - Llamados en _mobile.scss
+
+@mixin footer--md() {
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 55px;
+  }
+
+  .footer-grid-item:nth-child(2) {
+    order: 3;
+  }
+
+  .sub-footer {
+    flex-flow: column nowrap;
+    gap: 3px;
+  }
+}
+
+@mixin footer--sm() {
+
+  .footer-container {
+    padding: 0px 30px;
+  }
+
+  .footer-grid {
+    padding: 60px 0px;
+    grid-row-gap: 50px;
+  }
+
+  .sub-footer {
+    padding: 20px 0px;
+    gap: 10px;
+  }
+
+  .sub-footer-links {
+    flex-flow: row wrap;
+
+    p {
+      display: none;
+    }
+  }
+}

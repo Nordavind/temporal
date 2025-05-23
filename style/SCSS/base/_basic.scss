@@ -1,0 +1,80 @@
+// Basic
+
+html,
+body {
+  font-family: $font-uno;
+  background-color: $color-dark-a;
+  //scroll-behavior: smooth; apagado por problemas en mobile en conjunto a js de navbar
+}
+
+::selection {
+  color: $color-wht;
+  background: $color-primary;
+  ;
+}
+
+::-moz-selection {
+  color: $color-wht;
+  background: $color-primary;
+}
+
+.container-basico {
+  padding: 100px 40px;
+
+  &.basico-fix-bs-colindante {
+    // Fix para acomodar padding de bootstrap con el container.
+    padding-bottom: 0px;
+  }
+
+  &.basico-fix-bs {
+    padding: 52px 16px 100px 16px; // Fix para acomodar padding de bootstrap con el container.
+  }
+}
+
+// Scrollbar
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #372554; //#4b346c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d3274; //#7753ab
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5f005f; //#b750b9
+}
+
+// Mobile - Llamados en _mobile.scss
+
+@mixin basic--md() {
+  .container-basico {
+    padding: 80px 40px;
+
+    &.basico-fix-bs-colindante {
+      padding-bottom: 0px;
+    }
+
+    &.basico-fix-bs {
+      padding: 32px 6px 80px 6px;
+    }
+  }
+}
+
+@mixin basic--sm() {
+  .container-basico {
+    padding: 60px 30px;
+
+    &.basico-fix-bs-colindante {
+      padding-bottom: 0px;
+    }
+
+    &.basico-fix-bs {
+      padding: 12px 6px 60px 6px;
+    }
+  }
+}

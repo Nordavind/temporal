@@ -1,0 +1,18 @@
+// Variables
+
+$color-primary: #F52A8C;
+$color-secondary: #1F8ADB;
+$color-third: #B49CD9;
+$color-dark-a: #291B3E;
+$color-dark-b: #1A1127;
+$color-wht: #fff;
+
+%flex-init-col {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+%flex-init-row {
+  display: flex;
+  flex-flow: row nowrap;
+}

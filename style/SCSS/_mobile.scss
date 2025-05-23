@@ -1,0 +1,38 @@
+// Hoverfix
+@media (hover: hover) {
+  @include buttons--hoverfix(); // components/_buttons.scss
+  @include back-top--hoverfix(); // components/_back-top.scss
+  @include contacto-index--hoverfix(); // layouts/_contacto-index.scss
+}
+
+// Large (lg)
+@media screen and (max-width: 992px) {
+  @include navbar--lg(); // components/_navbar-index.scss
+  @include back-top--lg(); // components/_back-top.scss
+  @include header-home--lg(); // layouts/_header-home.scss
+  @include servicios--lg(); // layouts/_servicios.scss
+}
+
+// Medium (md)
+@media screen and (max-width: 768px) {
+  @include basic--md(); // base/_basic.scss
+  @include header-home--md(); // layouts/_header-home.scss
+  @include post-header--md(); // layouts/_post-header.scss
+  @include logos-grid--md(); // layouts/_logos-grid.scss
+  @include servicios--md(); // layouts/_servicios.scss
+  @include contacto-index--md(); // layouts/_contacto-index.scss
+  @include header-interior--md(); // layouts/_header-interior.scss
+  @include footer--md(); // layouts/_footer.scss
+}
+
+// Small (sm)
+@media screen and (max-width: 576px) {
+  @include basic--sm(); // base/_basic.scss
+  @include buttons--sm(); // components/_buttons.scss
+  @include header-home--sm(); // layouts/_header-home.scss
+  @include logos-grid--sm(); // layouts/_logos-grid.scss
+  @include servicios--sm(); // layouts/_servicios.scss
+  @include contacto-index--sm(); // layouts/_contacto-index.scss
+  @include header-interior--sm(); // layouts/_header-interior.scss
+  @include footer--sm(); // layouts/_footer.scss
+}
